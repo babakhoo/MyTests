@@ -1,0 +1,45 @@
+{
+  "ProjectName": "Babak",
+  "ProjectGuid": "0b6c3f30-24bb-44f6-b3ef-c585f1487c80",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.Babak",
+  "DisplayName": "Babak",
+  "Author": "",
+  "Description": "Babak",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{509c887a-9bae-4d3e-aa04-db24167b082a}",
+  "WP8ProductID": "{cd9a782a-3168-4075-96bd-a0b869c72060}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.Babak",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
