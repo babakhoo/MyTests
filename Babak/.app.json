@@ -6,11 +6,19 @@
       "name": "home",
       "components": [],
       "title": "Home View",
-      "addToNavigation": true,
-      "icon": "home"
+      "addToNavigation": false
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "db",
+      "title": "Babak / Babak",
+      "source": "everlive",
+      "everliveKey": "5zafgdhm15ic7xzx",
+      "offlineStorage": true
+    }
+  ],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
   "view": "home",

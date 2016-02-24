@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title></title>
-    <meta charset="utf-8">
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
-
+    <meta charset="utf-8" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+    
+   
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="kendo/js/everlive.all.min.js"></script>        
+    
     <script src="app.js"></script>
 </head>
-
-<body id="kendoUiMobileApp">
-    <script src="components/home/index.js"></script>
-    <div data-role="layout" data-id="main">
+<body>
+    
+    <div id="all-contacts" data-role="view" data-title="My Contacts" data-show="window.getAllContacts22">
         <header data-role="header">
             <div data-role="navbar">
-                <span data-role="view-title"></span>
+                <div data-role="view-title"></div>
             </div>
         </header>
-
-        <!-- application views will be rendered here -->
-
-        <footer data-role="footer">
-            <div data-role="tabstrip" id="navigation-container">
-                <a href="components/home/view.html" data-icon="home">Home View</a>
-            </div>
-        </footer>
+        <div id="pictures">
+            <button id="check_online" data-role="button" onclick="window.Test()">check_online</button>
+            <button id="stopcheck_online" data-role="button" onclick="window.stopTest()">stopcheck_online</button>
+        Hellooooooooooooooo
     </div>
-
-    <div data-role="layout" data-id="main-nonav">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </header>
-
-        <!-- application views will be rendered here -->
-
-        <footer data-role="footer">
-        </footer>
+       <ul id="contacts-list" data-role="listview"></ul> 
     </div>
-    <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+    
+<div id="view-contact" data-role="view" data-title="Contact Details" data-show="window.getContactDetails">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-role="backbutton">Back</a>
+            <div data-role="view-title"></div>
+        </div>
+    </header>    
+    <img class="largeProfile" />
+    <h2 id="contact-name"></h2>
+    <h4 id="contact-phone"></h4>
+    <button id="update-photo" data-role="button" onclick="window.updatePhoto()">Update Photo</button>
+</div>
+    
+<script id="contacts-template" type="text/x-kendo-template">
+    <li>
+        <a href="\#view-contact?id=${id}" class="expand">
+            # if (photos && photos.length) { #
+                <img class="smallProfile" src="${photos[0].value}" />
+            # } else { #
+                <img class="smallProfile" src="styles/blankProfile.png" />
+            # } #
 
-    <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
+            # if (name.givenName) { #
+                ${name.givenName}
+            # } #
+
+            # if (name.familyName) { #
+                ${name.familyName}
+            # } #
+            
+        </a>
+    </li>
+</script>
+    
+    
+    
 </body>
-
 </html>
